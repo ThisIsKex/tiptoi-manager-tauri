@@ -1,0 +1,37 @@
+Copyright (c) 2026 Gregor
+
+Alle Rechte vorbehalten / All rights reserved.
+
+Dieses Projekt ist ein **inoffizielles, privates Hobby-Projekt** und steht in
+keiner Lizenz- oder Vertragsbeziehung zur Ravensburger Verlag GmbH.
+
+1. Umfang
+   Dieser Quellcode (Vue-Frontend, Rust/Tauri-Backend) darf von dir
+   persönlich frei genutzt, verändert und für den Eigenbedarf weiterverwendet
+   werden.
+
+2. Keine öffentliche Weiterverbreitung in aktueller Form
+   Der Katalog-Client (`src-tauri/src/catalog.rs`) nutzt ausschließlich
+   öffentlich erreichbare, unauthentifizierte Endpunkte des Ravensburger
+   Serviceportals (service.ravensburger.de) – es werden keine reverse
+   engineerten Zugangsdaten mehr verwendet und keine fremde Codebasis mehr
+   portiert. Dennoch wird von einer öffentlichen Weiterverbreitung (z.B. als
+   öffentliches GitHub-Repo, Binär-Release, Paket in einer Distribution)
+   vorerst abgesehen, da:
+     - diese Endpunkte nicht offiziell als öffentliche API dokumentiert oder
+       stabil zugesichert sind (sie könnten sich jederzeit ändern oder
+       wegfallen),
+     - die Nutzungsbedingungen des Serviceportals ein automatisiertes
+       Abfragen ggf. nicht ausdrücklich erlauben,
+     - Markenrechte von Ravensburger zu beachten sind (siehe unten).
+
+3. Keine Gewährleistung
+   Die Software wird ohne jegliche Gewährleistung bereitgestellt. Nutzung auf
+   eigene Gefahr, insbesondere im Hinblick auf den tiptoi(R)-Stift und darauf
+   gespeicherte Daten.
+
+4. Marken
+   "tiptoi" ist eine eingetragene Marke der Ravensburger Verlag GmbH.
+   Dieses Projekt ist damit nicht verbunden und wird nicht von Ravensburger
+   unterstützt, gesponsert oder geprüft. Siehe README.md, Abschnitt
+   "Markenrechte / Trademark".

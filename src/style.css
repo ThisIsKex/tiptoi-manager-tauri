@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+/* Eigenes kleines "Design-System" aus wiederverwendbaren Tailwind-Komponentenklassen,
+   damit wir ohne externe UI-Bibliothek (Lizenzgründe) konsistent bleiben.
+   Tailwind v4 erlaubt kein @apply einer eigenen Klasse in einer anderen eigenen
+   Klasse, daher sind die gemeinsamen Basis-Utilities hier jeweils ausgeschrieben. */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
+      transition-colors disabled:opacity-50 disabled:pointer-events-none cursor-pointer select-none
+      bg-orange-500 text-white hover:bg-orange-600;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
+      transition-colors disabled:opacity-50 disabled:pointer-events-none cursor-pointer select-none
+      border border-slate-300 text-slate-600 hover:bg-slate-100;
+  }
+  .btn-outline-active {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
+      transition-colors disabled:opacity-50 disabled:pointer-events-none cursor-pointer select-none
+      border border-orange-500 bg-orange-500 text-white hover:bg-orange-600;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
+      transition-colors disabled:opacity-50 disabled:pointer-events-none cursor-pointer select-none
+      text-slate-500 hover:bg-slate-100;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
+      transition-colors disabled:opacity-50 disabled:pointer-events-none cursor-pointer select-none
+      text-red-600 hover:bg-red-50;
+  }
+  .btn-icon {
+    @apply !p-2 rounded-full;
+  }
+
+  .card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-slate-300 px-3 py-2 text-sm
+      focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400;
+  }
+
+  .tag-success {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium
+      bg-emerald-100 text-emerald-700;
+  }
+  .tag-neutral {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium
+      bg-slate-100 text-slate-500;
+  }
+
+  .progress-track {
+    @apply w-full h-2 rounded-full bg-slate-200 overflow-hidden;
+  }
+  .progress-bar {
+    @apply h-full rounded-full bg-orange-500 transition-all duration-300;
+  }
+
+  .alert-error {
+    @apply rounded-lg bg-red-50 text-red-700 border border-red-200 px-4 py-3 text-sm;
+  }
+
+  .spinner {
+    @apply inline-block w-8 h-8 rounded-full border-4 border-slate-200 border-t-orange-500 animate-spin;
+  }
+}
