@@ -1,6 +1,7 @@
 //! tiptoi® Stift-Erkennung und Dateisystem-Analyse unter Linux.
-//! Portiert von der Python-Referenzimplementierung (pen.py):
-//! Scannt Mountpoints, liest `.tiptoi.log` und `.gme`-Header aus.
+//! Scannt angeschlossene Mountpoints nach dem `.tiptoi.log` der Stift-
+//! Firmware (Seriennummer, Firmware, Sprache, MCU/Generation) und liest die
+//! Header installierter `.gme`-Dateien (GME-ID, Version) aus.
 
 use serde::Serialize;
 use std::fs;
